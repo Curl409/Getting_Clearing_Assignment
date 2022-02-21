@@ -39,5 +39,5 @@ run_analysis <- function() {
     library(dplyr)
     Data_meanstd_grouped <- group_by(Data_meanstd, activities, subject)
     result <- summarise_each(Data_meanstd_grouped, funs(mean), everything())
-    write.table(result, "./result.txt")
+    write.table(result, "./result.txt", row.names=F)
 }
